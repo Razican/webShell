@@ -80,6 +80,7 @@ function prompt() {
                         history.push(last_line);
                         history_index = history.length;
                         last_line = "";
+                        window.scrollTo(0,document.body.scrollHeight);
                     }
                 } else if (event.key == 'Backspace') {
                     last_line = last_line.substring(0, last_line.length - 1)
