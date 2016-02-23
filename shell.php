@@ -70,13 +70,12 @@ function prompt() {
                     } else {
                         $('#old_info').append('<?php echo prompt(); ?>'+last_line+'<br>');
                         $.getJSON('shell.php?command='+last_line.trim(), function(json) {
-                            console.log(last_line);
                             if (json.exit_code == 0) {
                                 $('#old_info').append(json.response);
                             } else {
                                 $('#old_info').append('bash: error<br>');
                             }
-                        }.bind(last_line));
+                        });
 
                         history.push(last_line);
                         history_index = history.length;
@@ -103,7 +102,6 @@ function prompt() {
         </script>
         <style>
         body {
-            /*margin: 0;*/
             font-family: monospace;
         }
 

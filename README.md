@@ -1,2 +1,2 @@
 # webShell
-Small PHP webShell in PHP
+Small webShell in PHP
